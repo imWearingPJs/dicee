@@ -26,12 +26,13 @@ class ViewController: UIViewController {
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         updateDiceImages()
-    }//
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        updateDiceImages()
+    }
     
     func updateDiceImages() {
-//        randomDiceIndex1 = Int.random(in: 0 ... 5)
-//        randomDiceIndex2 = Int.random(in: 0 ... 5)
-
         randomDiceIndex1 = getRandomNumber()
         randomDiceIndex2 = getRandomNumber()
         
